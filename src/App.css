@@ -1,0 +1,74 @@
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 64px;
+  box-sizing: border-box;
+}
+
+.app-header {
+  text-align: center;
+  padding: 56px 0 40px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 40px;
+}
+
+.app-header h1 {
+  font-size: 48px;
+  letter-spacing: -1.5px;
+  margin-bottom: 10px;
+}
+
+.app-header p {
+  font-size: 17px;
+  color: var(--text);
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.chart-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+.chart-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.chart-card-header {
+  padding: 20px 24px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.chart-card-header h2 {
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.chart-card-header p {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.chart-card-body {
+  padding: 16px 8px 8px;
+}
+
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 32px;
+  }
+
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-card:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+}
