@@ -31,7 +31,7 @@ export default function ServerLoadAreaChart() {
         <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" vertical={false} />
         <XAxis dataKey="time" tick={{ fontSize: 12, fill: 'var(--text)' }} axisLine={false} tickLine={false} />
         <YAxis tickFormatter={(v) => `${v}%`} domain={[0, 100]} tick={{ fontSize: 12, fill: 'var(--text)' }} axisLine={false} tickLine={false} width={40} />
-        <Tooltip formatter={(v: number) => [`${v}%`, undefined]} />
+        <Tooltip formatter={(v) => [`${Number(v)}%`, undefined]} />
         <Legend wrapperStyle={{ fontSize: 13 }} />
         <Area type="monotone" dataKey="cpu" name="CPU" stroke="#7c3aed" strokeWidth={2} fill="url(#gradCpu)" />
         <Area type="monotone" dataKey="memory" name="Memory" stroke="#f59e0b" strokeWidth={2} fill="url(#gradMem)" />

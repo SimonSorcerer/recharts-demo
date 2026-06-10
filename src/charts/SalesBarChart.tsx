@@ -20,7 +20,7 @@ export default function SalesBarChart() {
         <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" vertical={false} />
         <XAxis dataKey="month" tick={{ fontSize: 12, fill: 'var(--text)' }} axisLine={false} tickLine={false} />
         <YAxis tickFormatter={(v) => `$${v / 1000}k`} tick={{ fontSize: 12, fill: 'var(--text)' }} axisLine={false} tickLine={false} width={48} />
-        <Tooltip formatter={(v: number) => [`$${v.toLocaleString()}`, undefined]} />
+        <Tooltip formatter={(v) => [`$${Number(v).toLocaleString()}`, undefined]} />
         <Legend wrapperStyle={{ fontSize: 13 }} />
         <Bar dataKey="revenue" name="Revenue" fill="#7c3aed" radius={[4, 4, 0, 0]} />
         <Bar dataKey="expenses" name="Expenses" fill="#a78bfa" radius={[4, 4, 0, 0]} />

@@ -28,7 +28,7 @@ export default function DevicePieChart() {
             <Cell key={i} fill={COLORS[i % COLORS.length]} />
           ))}
         </Pie>
-        <Tooltip formatter={(v: number) => [v.toLocaleString(), 'Sessions']} />
+        <Tooltip formatter={(v) => [Number(v).toLocaleString(), 'Sessions']} />
         <Legend wrapperStyle={{ fontSize: 13 }} />
       </PieChart>
     </ResponsiveContainer>
